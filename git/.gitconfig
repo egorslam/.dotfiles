@@ -1,0 +1,8 @@
+[user]
+	name = Yehor Oliinyk
+	email = egorslam@users.noreply.github.com
+
+[pull]
+	rebase = true
+[fetch]
+	prune = true

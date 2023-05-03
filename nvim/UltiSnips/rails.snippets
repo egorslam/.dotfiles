@@ -1,0 +1,19 @@
+snippet fc
+$1 = create(:$1$2)
+endsnippet
+
+snippet lc
+let(:$1) { create(:$1$2) }
+endsnippet
+
+snippet lb
+let(:$1) { build(:$1$2) }
+endsnippet
+
+snippet cit
+context "$1" do
+	it "$2" do
+		$3
+	end
+end
+endsnippet
