@@ -24,8 +24,7 @@ require("lazy").setup({
   {
     "vim-test/vim-test",
     config = function ()
-      vim.g['test#strategy'] = 'neovim'
-      vim.g['test#neovim#term_position'] = 'vert botright 80'
+      vim.g['test#strategy'] = 'vimux'
     end,
   },
   { "thoughtbot/vim-rspec" },
@@ -36,26 +35,40 @@ require("lazy").setup({
   -- Vimux for running commands in tmux
   { "benmills/vimux" },
 
-  -- Linting and fixing
-  { "w0rp/ale" },
-
   -- Split and join lines
   { "AndrewRadev/splitjoin.vim" },
 
   -- Surround text objects
-  { "tpope/vim-surround" },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup()
+    end
+  },
 
   -- Auto-save on buffer change
-  { "Pocco81/auto-save.nvim", enabled = false },
+  { "Pocco81/auto-save.nvim" },
 
   -- Indentation guides
-  { "lukas-reineke/indent-blankline.nvim" },
+  { 
+    "lukas-reineke/indent-blankline.nvim", 
+    main = "ibl", 
+    opts = {}
+  },
 
   -- Treesitter for syntax highlighting
   { "nvim-treesitter/nvim-treesitter" },
+  { "nvim-treesitter/nvim-treesitter-textobjects" },
 
   -- Commenting
-  { "preservim/nerdcommenter" },
+  { 
+    "numToStr/Comment.nvim",
+    config = function()
+      require('Comment').setup()
+    end
+  },
 
   -- Color schemes
   { "catppuccin/nvim", },
@@ -64,22 +77,37 @@ require("lazy").setup({
   { "SirVer/ultisnips" },
   { "honza/vim-snippets" },
 
-  -- FZF for fuzzy finding
-  { "junegunn/fzf" },
-  { "junegunn/fzf.vim" },
-
-  -- Prettier for code formatting
-  { "prettier/vim-prettier" },
+  -- Telescope
+  {
+    'nvim-telescope/telescope.nvim', 
+    tag = '0.1.3',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  },
 
   -- Matchup for improved matching
   { "andymass/vim-matchup" },
 
-  -- Ruby block text objects
-  { "nelstrom/vim-textobj-rubyblock", enabled = false },
-
-  -- Custom text objects
-  { "kana/vim-textobj-user" },
-
   -- Nvim-tree file explorer
-  { "nvim-tree/nvim-tree.lua" }
+  { "nvim-tree/nvim-tree.lua" },
+  
+  -- Linting
+  { 'stevearc/conform.nvim' },
+
+  { 'neoclide/coc.nvim', branch = 'release' },
+
+
+  -- LSP
+  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
+
+  {'neovim/nvim-lspconfig'},
+  --
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
+  -- {
+  --   'L3MON4D3/LuaSnip',
+  --   dependencies = { "rafamadriz/friendly-snippets" },
+  -- },
 })

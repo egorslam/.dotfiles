@@ -1,5 +1,5 @@
 require("catppuccin").setup {
-  transparent_background = true,
+  flavour = "macchiato",
   integrations = {
     nvimtree = true,
     treesitter = true,

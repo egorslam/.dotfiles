@@ -4,5 +4,7 @@ require("remap")
 require("colors")
 require("plugins/nvim-tree")
 require("plugins/nvim-treesitter")
-
-
+require("plugins/telescope")
+require("plugins/conform")
+require("plugins/lsp")
+require("plugins/indent-blankline")
