@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,13 +103,6 @@ source $ZSH/oh-my-zsh.sh
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# aliases
-alias n="nvim"
-alias be="bundle exec"
-
-alias rs="rails s"
-alias rc="rails c"
 
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow'

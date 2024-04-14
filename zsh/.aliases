@@ -1,0 +1,7 @@
+# aliases
+alias n="nvim"
+alias be="bundle exec"
+
+alias rs="rails s"
+alias rc="rails c"
+
