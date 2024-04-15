@@ -7,12 +7,6 @@ _________
 xcode-select --install
 ```
 
-
-##### Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
 ##### Clone dotfiles
 ```
 git clone git@github.com:egorslam/.dotfiles.git ~/.dotfiles
@@ -34,8 +28,14 @@ brew install stow
 ```
 
 ##### Link config files with Stow
+
+Delete existing .zshrc before linking:
 ```
-cd ~/dotfiles && stow \
+rm -f cd ~/.zshrc
+```
+
+```
+cd ~/.dotfiles && stow \
   git \
   homebrew \
   nvim \
@@ -46,4 +46,23 @@ cd ~/dotfiles && stow \
 ##### Install packages
 ```
 brew bundle --global
+```
+
+##### Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+##### Install Node.js
+
+1. ```
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+```
+
+2. ```
+asdf install nodejs latest
+```
+
+3. ```
+asdf global nodejs latest
 ```
