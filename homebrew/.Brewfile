@@ -14,3 +14,4 @@ brew 'fzf'
 # Terminal emulators
 ################################################
 cask 'iterm2'
+cask 'sublime-text'

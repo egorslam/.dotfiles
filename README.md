@@ -1,33 +1,29 @@
-### Installation
-_________
-
-#### On fresh Mac OS
-##### Install XCode Command Line Tools
+### Installation for Mac OS
+#### Install XCode Command Line Tools
 ```
 xcode-select --install
 ```
 
-##### Clone dotfiles
+#### Clone this repository
 ```
 git clone git@github.com:egorslam/.dotfiles.git ~/.dotfiles
 ```
-
 ##### Install [Homebrew](https://brew.sh)
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Setup brew path untill .zprofile is linked:
+Set up Homebrew path until .zprofile is linked
 ```
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-##### Install [Stow](https://www.gnu.org/software/stow/manual/stow.html)
+#### Install [Stow](https://www.gnu.org/software/stow/manual/stow.html)
 ```
 brew install stow
 ```
 
-##### Link config files with Stow
+#### Link config files with Stow
 
 Delete existing .zshrc before linking:
 ```
@@ -43,26 +39,37 @@ cd ~/.dotfiles && stow \
   zsh
 ```
 
-##### Install packages
+#### Install packages
 ```
 brew bundle --global
 ```
 
-##### Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
+#### Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-##### Install Node.js
+#### Install Node.js
 
-1. ```
+```
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-```
-
-2. ```
 asdf install nodejs latest
+asdf global nodejs latest
 ```
 
-3. ```
-asdf global nodejs latest
+#### Install Ruby
+
+```
+asdf plugin add ruby
+asdf install ruby latest
+asdf global ruby latest
+```
+
+#### Install Python
+
+```
+asdf plugin add python 
+asdf install python latest
+asdf global python latest
+python3 -m pip install --user --upgrade pynvim
 ```
