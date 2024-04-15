@@ -8,7 +8,7 @@ xcode-select --install
 ```
 git clone git@github.com:egorslam/.dotfiles.git ~/.dotfiles
 ```
-##### Install [Homebrew](https://brew.sh)
+#### Install [Homebrew](https://brew.sh)
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
