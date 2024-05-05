@@ -1,5 +1,6 @@
 brew 'stow'
 brew 'tmux'
+brew 'yarn'
 
 # Editors
 brew 'neovim'
@@ -15,3 +16,4 @@ brew 'fzf'
 ################################################
 cask 'iterm2'
 cask 'sublime-text'
+cask 'slack'
