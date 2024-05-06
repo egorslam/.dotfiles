@@ -2,15 +2,15 @@ local lsp_zero = require('lsp-zero')
 
 
 lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
+  lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-lsp_zero.setup_servers({'tsserver', 'solargraph'})
+lsp_zero.setup_servers({ 'tsserver', 'solargraph', 'lua_ls' })
 
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'solargraph'},
+  ensure_installed = { 'tsserver', 'solargraph', 'lua_ls' },
   handlers = {
     lsp_zero.default_setup,
   }
@@ -24,9 +24,10 @@ cmp.setup({
     end,
   },
   sources = {
-    {name = 'path'},
-    {name = 'nvim_lsp'},
-    {name = 'nvim_lua'},
+    { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
+    { name = 'buffer' },
+    { name = 'path' },
   },
   formatting = lsp_zero.cmp_format(),
   mapping = cmp.mapping.preset.insert({
@@ -36,4 +37,3 @@ cmp.setup({
     ['<c-space>'] = cmp.mapping.complete(),
   }),
 })
-
