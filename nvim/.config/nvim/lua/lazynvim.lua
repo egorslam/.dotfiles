@@ -93,13 +93,6 @@ require("lazy").setup({
   -- Linting
   { 'stevearc/conform.nvim' },
 
-  { 'neoclide/coc.nvim',
-    config = function()
-      vim.api.nvim_buf_set_var(0, 'coc_suggest_disable', 1)
-    end
-  },
-
-
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
 
