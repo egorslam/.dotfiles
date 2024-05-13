@@ -1,10 +1,13 @@
 require("conform").setup({
-	formatters_by_ft = {
-		lua = { "stylua" },
-		javascript = { "prettier" },
-		typescript = { "prettier" },
-		ruby = { "rubocop" },
-	},
+  formatters_by_ft = {
+    lua = { "stylua" },
+    javascript = { { "prettierd", "prettier" } },
+    json = { { "prettierd", "prettier" } },
+    typescript = { "prettier" },
+    css = { { "prettierd", "prettier" } },
+    scss = { { "prettierd", "prettier" } },
+    ruby = { "rubocop" },
+  },
   formatters = {
     rubocop = {
       prepend_args = { "--server" },
