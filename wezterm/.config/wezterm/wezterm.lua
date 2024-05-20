@@ -29,10 +29,10 @@ config.tab_bar_at_bottom = false
 config.hide_tab_bar_if_only_one_tab = true
 
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 5,
-  bottom = 5,
+  left = '0.5cell',
+  right = '0.5cell',
+  top = '0.25cell',
+  bottom = '0.25cell',
 }
 
 return config
