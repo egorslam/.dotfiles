@@ -10,6 +10,7 @@ brew 'asdf'
 
 # Comand Line Tools
 brew 'fzf'
+brew 'tig'
 
 ################################################
 # Terminal emulators
