@@ -15,9 +15,9 @@ brew 'fzf'
 # Terminal emulators
 ################################################
 cask 'iterm2'
-cask 'sublime-text'
 cask 'slack'
 cask 'wezterm'
+cask 'zed'
 
 # Fonts
 cask 'font-fira-code'
