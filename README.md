@@ -36,6 +36,7 @@ cd ~/.dotfiles && stow \
   homebrew \
   nvim \
   tmux \
+  wezterm \
   zsh
 ```
 

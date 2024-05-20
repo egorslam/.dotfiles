@@ -106,3 +106,5 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow'
+
+export TERM="xterm-256color"

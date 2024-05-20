@@ -17,3 +17,7 @@ brew 'fzf'
 cask 'iterm2'
 cask 'sublime-text'
 cask 'slack'
+cask 'wezterm'
+
+# Fonts
+cask 'font-fira-code'
