@@ -14,11 +14,12 @@ end
 
 -- For example, changing the color scheme:
 -- config.color_scheme = "AdventureTime"
-config.color_scheme = "Catppuccin Macchiato"
 
-config.window_decorations = "RESIZE"
-config.window_close_confirmation = "NeverPrompt" -- 'AlwaysPrompt'
+config.color_scheme = "Catppuccin Macchiato"
+config.scrollback_lines = 7000
 config.use_dead_keys = false
+config.window_close_confirmation = "NeverPrompt" -- 'AlwaysPrompt'
+config.window_decorations = "RESIZE"
 
 config.font = wezterm.font("Fira Code")
 
