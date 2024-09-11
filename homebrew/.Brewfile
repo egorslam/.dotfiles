@@ -22,3 +22,6 @@ cask 'zed'
 
 # Fonts
 cask 'font-fira-code'
+
+
+brew 'prettierd'
