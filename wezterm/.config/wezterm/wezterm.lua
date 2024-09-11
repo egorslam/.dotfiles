@@ -23,7 +23,7 @@ config.window_decorations = "RESIZE"
 
 config.font = wezterm.font("Fira Code")
 
--- config.font_size = 14.0
+config.font_size = 13.0
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false

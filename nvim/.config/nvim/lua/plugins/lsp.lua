@@ -1,16 +1,16 @@
 local lsp_zero = require('lsp-zero')
 
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
   lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-lsp_zero.setup_servers({ 'tsserver', 'solargraph', 'lua_ls' })
+lsp_zero.setup_servers({ 'ts_ls', 'solargraph', 'lua_ls' })
 
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'tsserver', 'solargraph', 'lua_ls' },
+  ensure_installed = { 'ts_ls', 'solargraph', 'lua_ls' },
   handlers = {
     lsp_zero.default_setup,
   }
