@@ -4,6 +4,7 @@ brew 'yarn'
 
 # Editors
 brew 'neovim'
+cask 'zed'
 
 # Version manager
 brew 'asdf'
@@ -11,17 +12,11 @@ brew 'asdf'
 # Comand Line Tools
 brew 'fzf'
 brew 'tig'
+brew 'gh'
 
-################################################
-# Terminal emulators
-################################################
-cask 'iterm2'
 cask 'slack'
 cask 'wezterm'
-cask 'zed'
 
-# Fonts
 cask 'font-fira-code'
-
 
 brew 'prettierd'
