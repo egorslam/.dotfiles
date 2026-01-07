@@ -19,4 +19,6 @@ cask 'wezterm'
 
 cask 'font-fira-code'
 
+# Formatters
 brew 'prettierd'
+brew 'stylua'
